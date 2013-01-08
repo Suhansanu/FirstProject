@@ -24,9 +24,10 @@ public class Main {
 		String [] valid_wordnet_terms         = Central.validTerms(original_terms);
                 String [] terms                       = Tagger.filterTermsbyPOStagger(text , valid_wordnet_terms);
                 Central.showInputMessage(text , terms);
-                
-                String[][] terms_sense_original_lesk   = Central.originalLesk  (text , terms);
-//                String[][] terms_sense_simplified_lesk = Central.simplifiedLesk(text , terms);
+                System.out.println("\n\n==========Original Lesk ==========================\n");
+                String[][] terms_sense_original_lesk    = Central.originalLesk  (text , terms);
+                System.out.println("\n\n==========Simplified Lesk=========================\n");
+                 String[][] terms_sense_simplified_lesk = Central.simplifiedLesk(text , terms);
 
 		
 	}
